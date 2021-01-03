@@ -1,1 +1,11 @@
-<p>blog-post works!</p>
+<p></p>
+<form #blogform (ngSubmit)="postBlog(head.value, body.value, which.value - 1); this.blogform.reset()">
+  <input #head  placeholder="Tittle"> <br>
+  <input #body placeholder="Body"> <br>
+  <br>
+  <div> Do you want to edit?</div>
+  <input #which type="number"><br><p></p>
+  <button type="submit">Post</button> <br>
+</form>
+
+<div id="BlogPost"></div>
