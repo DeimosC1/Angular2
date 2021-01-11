@@ -1,1 +1,11 @@
-<p>angular works!</p>
+<div class="p-5">
+  <div *ngFor="let post of posts">
+    <h2>{{post.title}}</h2>
+    <p>{{post.body}}</p>
+    <button (click)="post.showForm - !post.showForm">edit</button>
+    <form *ngIf="post.showForm">
+      <input [(ngModel)]="post.title" name="title" ]>
+      <textarea [(ngModel)]="post.body" name="body"></textarea>
+    </form>
+  </div>
+</div>
